@@ -29,7 +29,7 @@ Clone the Repository
 
 bash
 Copy code
-git clone https://github.com/your-username/zomato-clone.git
+git clone https://github.com/Kunalverma45/ZOMATO.com.git
 cd zomato-clone
 Set Up the Backend
 
