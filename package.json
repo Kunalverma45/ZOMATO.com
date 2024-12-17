@@ -1,0 +1,27 @@
+{
+  "name": "zomato.com",
+  "version": "1.0.0",
+  "description": "Make a fully featured clone of Zomato.com. It should reflect the ordering UI properly and have capabilities to place orders, cancel orders, chat with support, browse restaurants, etc. and connected restaurant management portal inside the same application where restaurants can register and set menus, food items, prices, etc.\r A fully functional Zomato.com clone built using the MERN stack (MongoDB, Express.js, React, and Node.js). This application includes two interconnected portals:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.4",
+    "react-scripts": "^5.0.1",
+    "zomato.com": "file:"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.26.0",
+    "nodemon": "^3.1.9"
+  }
+}
