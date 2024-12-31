@@ -1,3 +1,4 @@
+
 # ZOMATO.com Clone
 
 A fully functional clone of **Zomato.com** built using the MERN stack (MongoDB, Express.js, React, and Node.js). This application replicates Zomato's core functionalities, including restaurant browsing, order management, and real-time communication, while incorporating a restaurant management portal for seamless operations.
@@ -38,59 +39,68 @@ A fully functional clone of **Zomato.com** built using the MERN stack (MongoDB, 
 ```bash
 git clone https://github.com/Kunalverma45/ZOMATO.com.git
 cd ZOMATO.com
+```
 
-
-Set Up the Backend
+### **Set Up the Backend**
 Navigate to the backend directory:
-bash
-Copy code
+```bash
 cd backend
+```
 Install dependencies:
-bash
-Copy code
+```bash
 npm install
-Create a .env file with the following variables:
-makefile
-Copy code
+```
+Create a `.env` file with the following variables:
+```bash
 MONGO_URI=<your-mongodb-connection-string>
 JWT_SECRET=<your-jwt-secret>
 PORT=5000
+```
 Start the backend server:
-bash
-Copy code
+```bash
 npm start
-Set Up the Frontend
+```
+
+### **Set Up the Frontend**
 Navigate to the frontend directory:
-bash
-Copy code
+```bash
 cd ../frontend
+```
 Install dependencies:
-bash
-Copy code
+```bash
 npm install
+```
 Start the React app:
-bash
-Copy code
+```bash
 npm start
-Generate Sample Data
+```
+
+### **Generate Sample Data**
 Use Faker.js or a custom script to populate your database with sample restaurants and menus.
 
-API Endpoints
-Authentication
-POST /api/auth/register: Register a new user/restaurant.
-POST /api/auth/login: Login with email and password.
-Customer App
-GET /api/restaurants: Fetch all restaurants.
-GET /api/restaurants/:id: Fetch restaurant details.
-POST /api/orders: Place a new order.
-GET /api/orders/:id: Get order details.
-Restaurant Management
-POST /api/restaurant/profile: Create or update a restaurant profile.
-POST /api/restaurant/menu: Add menu items.
-GET /api/restaurant/orders: Fetch restaurant-specific orders.
-Project Structure
-bash
-Copy code
+---
+
+## **API Endpoints**
+
+### Authentication
+- `POST /api/auth/register`: Register a new user/restaurant.
+- `POST /api/auth/login`: Login with email and password.
+
+### Customer App
+- `GET /api/restaurants`: Fetch all restaurants.
+- `GET /api/restaurants/:id`: Fetch restaurant details.
+- `POST /api/orders`: Place a new order.
+- `GET /api/orders/:id`: Get order details.
+
+### Restaurant Management
+- `POST /api/restaurant/profile`: Create or update a restaurant profile.
+- `POST /api/restaurant/menu`: Add menu items.
+- `GET /api/restaurant/orders`: Fetch restaurant-specific orders.
+
+---
+
+## **Project Structure**
+```bash
 zomato-clone/
 ├── backend/
 │   ├── controllers/
@@ -109,40 +119,56 @@ zomato-clone/
 │   └── .env
 ├── README.md
 └── package.json
-Milestones
-Week 1: Setup and Authentication
-Project setup and environment configuration.
-Implement JWT-based authentication.
-Week 2: Restaurant and Menu Management
-Customer portal: Restaurant browsing.
-Restaurant portal: Profile and menu management.
-Week 3: Order Functionality
-Customer portal: Place and track orders.
-Restaurant portal: Process and update order statuses.
-Week 4: Advanced Features
-Add chat support and real-time notifications.
-Refine UI/UX and finalize deployment.
-Contributing
+```
+
+---
+
+## **Milestones**
+
+- **Week 1**: Setup and Authentication
+  - Project setup and environment configuration.
+  - Implement JWT-based authentication.
+
+- **Week 2**: Restaurant and Menu Management
+  - Customer portal: Restaurant browsing.
+  - Restaurant portal: Profile and menu management.
+
+- **Week 3**: Order Functionality
+  - Customer portal: Place and track orders.
+  - Restaurant portal: Process and update order statuses.
+
+- **Week 4**: Advanced Features
+  - Add chat support and real-time notifications.
+  - Refine UI/UX and finalize deployment.
+
+---
+
+## **Contributing**
 Contributions are welcome! Please follow these steps:
 
-Fork the repository.
-Create a new branch for your feature:
-bash
-Copy code
-git checkout -b feature-name
-Commit your changes:
-bash
-Copy code
-git commit -m "Add new feature"
-Push to your branch:
-bash
-Copy code
-git push origin feature-name
-Open a pull request.
-License
+1. Fork the repository.
+2. Create a new branch for your feature:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+---
+
+## **License**
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contact
-Name: Kunal Verma
-GitHub: Kunalverma45
-Email: kv47871@gmail.com
+---
+
+## **Contact**
+- Name: Kunal Verma
+- GitHub: [Kunalverma45](https://github.com/Kunalverma45)
+- Email: kv47871@gmail.com
