@@ -1,0 +1,166 @@
+.registration-container {
+  display: flex;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Sidebar */
+.registration-container .side-nav {
+  width: 25%;
+  background-color: #fafafa;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.registration-container .side-nav h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e23744;
+  margin-bottom: 20px;
+}
+
+.registration-container .side-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.registration-container .side-nav ul li {
+  padding: 12px 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.registration-container .side-nav ul li.active,
+.registration-container .side-nav ul li:hover {
+  background-color: #ffe6e9;
+  border: 1px solid #e23744;
+  color: #e23744;
+}
+
+/* Main Content */
+.registration-container .form-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.registration-container .form-section {
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #eee;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-container .form-group {
+  margin-bottom: 20px;
+}
+
+.registration-container .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+.registration-container .form-group input,
+.registration-container .form-group textarea,
+.registration-container .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+.registration-container .form-group input:focus,
+.registration-container .form-group textarea:focus,
+.registration-container .form-group select:focus {
+  border-color: #e23744;
+  outline: none;
+}
+
+.registration-container .timing-inputs {
+  display: flex;
+  gap: 15px;
+}
+
+/* Mobile Input */
+.registration-container .mobile-input {
+  display: flex;
+  align-items: center;
+}
+
+.registration-container .mobile-input .country-code {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+.registration-container .mobile-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 0 6px 6px 0;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+.registration-container .btn {
+  background-color: #e23744;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.registration-container .btn:hover {
+  background-color: #b72136;
+}
+
+/* Cuisine Buttons */
+.registration-container .cuisine-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.registration-container .cuisine-button {
+  padding: 12px 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.registration-container .cuisine-button:hover {
+  background-color: #ffe6e9;
+  color: #e23744;
+}
+
+.registration-container .cuisine-button.selected {
+  background-color: #e23744;
+  color: #fff;
+  border-color: #e23744;
+}

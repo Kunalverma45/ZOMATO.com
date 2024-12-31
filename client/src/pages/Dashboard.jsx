@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-// Layout
-import HomePageLayout from "../layouts/HomePageLayout";
+
 // Components
+import Navbar from "../components/Navbar/ExtraNav"; // Import Navbar
 import Delivery from "../components/Delivery/Delivery";
 import Dining from "../components/Dining/Dining";
 import NightLife from "../components/NightLife/NightLife";
@@ -11,27 +11,35 @@ import Nutrition from "../components/Nutrition/Nutrition";
 // CSS
 import "./HomePage.css";
 
-const HomePage = () => {
-  const { type } = useParams();
+const Dashboard = () => {
+    const { type } = useParams();
 
   if (type) {
     return (
-      <div className="my-5 mb-20 md:mb-10">
-        {type === "delivery" && <Delivery />}
-        {type === "dining" && <Dining />}
-        {type === "night" && <NightLife />}
-        {type === "nutrition" && <Nutrition />}
+      <div className="dashboard">
+        <Navbar /> {/* Include Navbar */}
+        <div className="my-5 mb-20 md:mb-10">
+          {type === "delivery" && <Delivery />}
+          {type === "dining" && <Dining />}
+          {type === "night" && <NightLife />}
+          {type === "nutrition" && <Nutrition />}
+        </div>
       </div>
     );
   }
 
   return (
     <div className="homepage">
+      
+      {/* Include Navbar */}
+       <Navbar />
+      
       {/* Background Image */}
       <div
         className="background"
         style={{
           backgroundImage: `url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png")`,
+          marginTop: '1%'  // Corrected marginTop with camel case
         }}
       >
         <img
@@ -46,76 +54,18 @@ const HomePage = () => {
         <h1>Discover the best food & drinks in Indore</h1>
       </header>
 
-      {/* Explore Sections */}
-      <div className="sections">
-        <div className="section">
-          <h3>Order Online</h3>
-          <a href="http://localhost:3000/restaurant/ovew/order-online">
-            <img
-              // src="https://b.zmtcdn.com/data/pictures/5/1400155/fcddb3446a732b01dcb5faf7f73c095f.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
-              src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png"
-              alt="Order Online"
-              className="section-image"
-            />
-          </a>
-        </div>
-        <div className="section">
-          <h3>Dining</h3>
-          <a href="https://www.zomato.com/indore/dine-out">
-            <img
-              // src="https://b.zmtcdn.com/data/reviews_photos/15a/7f31c8b6d482c241f23c7a80ceffc15a_1638786014.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
-              src="https://b.zmtcdn.com/data/dish_images/e44c42ff4b60b025225c8691ef9735b11635781903.png"
-              alt="Dining"
-              className="section-image"
-            />
-          </a>
-        </div>
-        <div className="section">
-          <h3>Overview</h3>
-          <a href="http://localhost:3000/restaurant/ovew/overview">
-            <img
-              // src="https://b.zmtcdn.com/data/reviews_photos/15a/7f31c8b6d482c241f23c7a80ceffc15a_1638786014.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
-              src="https://b.zmtcdn.com/data/dish_images/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png"
-              alt="Dining"
-              className="section-image"
-            />
-          </a>
-        </div>
-        <div className="section">
-          <h3>Live Events</h3>
-          <a href="https://www.zomato.com/live/city/indore/events">
-            <img
-              // src="https://b.zmtcdn.com/data/o2_assets/371de657644f1b5818fcb5d83387c8c91722851940.png?output-format=webp&fit=around|402:360&crop=402:360;*,*"
-              src="https://b.zmtcdn.com/data/dish_images/d5ab931c8c239271de45e1c159af94311634805744.png"
-              alt="Live Events"
-              className="section-image"
-            />
-          </a>
-        </div>
-        <div className="section">
-          <h3>Reviews</h3>
-          <a href="http://localhost:3000/restaurant/ovew/reviews">
-            <img
-              // src="https://b.zmtcdn.com/data/pictures/5/1400155/fcddb3446a732b01dcb5faf7f73c095f.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
-              src="https://b.zmtcdn.com/data/o2_assets/bf2d0e73add1c206aeeb9fec762438111727708719.png"
-              alt="Order Online"
-              className="section-image"
-            />
-          </a>
-        </div>
-      </div>
 
       {/* Collections Section */}
       <div className="collections">
-        <h3>Collections</h3>
+        <h3>◈ Collections</h3>
         <p>
           Explore curated lists of top restaurants, cafes, pubs, and bars in
           Indore, based on trends.
-        <button className="collection-button">
+        {/* <button className="collection-button">
           <a href="https://www.zomato.com/indore/collections">
             All Collections in Indore
           </a>
-        </button>
+        </button> */}
         </p>
         <div className="collection-list">
           <div className="collection">
@@ -149,33 +99,23 @@ const HomePage = () => {
             </a>
           </div>
           <div className="collection">
-            <a href="https://www.zomato.com/indore/romantic-restaurants">
+            <a href="https://www.zomato.com/indore/6-local-favourite-places">
               <img
-                src="https://b.zmtcdn.com/data/pictures/9/19562899/c52f13bd9851548bfca0b6a3b28b8c58.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
-                alt="Romantic Dining"
+                src="https://b.zmtcdn.com/data/pictures/chains/0/1401670/75a1140592e701394ab766d2f2511dbd.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+                alt="Local Favourites"
                 className="collection-image"
               />
-              <h4>Romantic Dining Places</h4>
+              <h4>Local Favourite Places</h4>
             </a>
           </div>
           <div className="collection">
-            <a href="https://www.zomato.com/indore/fine-dining-restaurants">
+            <a href="https://www.zomato.com/indore/great-cafes">
               <img
-                src="https://b.zmtcdn.com/data/pictures/5/18601095/3a2e3cce5ad8a867c6ce5366ae948fb7.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
-                alt="Luxury Dining"
+                src="https://b.zmtcdn.com/data/pictures/9/19562899/c52f13bd9851548bfca0b6a3b28b8c58.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+                alt="Great Cafes"
                 className="collection-image"
                 />
-              <h4>Best Luxury Dining Places</h4>
-            </a>
-          </div>
-          <div className="collection">
-            <a href="https://www.zomato.com/indore/fine-dining-restaurants">
-              <img
-                src="https://b.zmtcdn.com/data/pictures/5/18601095/3a2e3cce5ad8a867c6ce5366ae948fb7.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
-                alt="Luxury Dining"
-                className="collection-image"
-                />
-              <h4>Best Luxury Dining Places</h4>
+              <h4>Great Cafes</h4>
             </a>
           </div>
           <div className="collection">
@@ -186,6 +126,16 @@ const HomePage = () => {
                 className="collection-image"
               />
               <h4>Local Favourite Places</h4>
+            </a>
+          </div>
+          <div className="collection">
+            <a href="https://www.zomato.com/indore/fine-dining-restaurants">
+              <img
+                src="https://b.zmtcdn.com/data/pictures/5/18601095/3a2e3cce5ad8a867c6ce5366ae948fb7.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+                alt="Luxury Dining"
+                className="collection-image"
+                />
+              <h4>Best Luxury Dining Places</h4>
             </a>
           </div>
           <div className="collection">
@@ -203,7 +153,7 @@ const HomePage = () => {
 
       {/* Popular Localities */}
       <div className="popular-localities">
-        <h3>Popular Localities in and around Indore</h3>
+        <h3>◈ Popular Localities in and around Indore</h3>
         <ul className="locality-list">
           <button className="locality-button">
             <a href="https://www.zomato.com/indore/vijay-nagar-restaurants">
@@ -256,11 +206,6 @@ const HomePage = () => {
             </a>
           </button>
           <button className="locality-button">
-            <a href="https://www.zomato.com/indore/rau-restaurants">
-              Rau - 88 places
-            </a>
-          </button>
-          <button className="locality-button">
             <a href="https://www.zomato.com/indore/vijay-nagar-restaurants">
               Vijay Nagar - 1340 places
             </a>
@@ -273,6 +218,16 @@ const HomePage = () => {
           <button className="locality-button">
             <a href="https://www.zomato.com/indore/old-palasia-restaurants">
               Old Palasia - 98 places
+            </a>
+          </button>
+          <button className="locality-button">
+            <a href="https://www.zomato.com/indore/bhawar-kuan-restaurants">
+              Bhawar Kuan - 75 places
+            </a>
+          </button>
+          <button className="locality-button">
+            <a href="https://www.zomato.com/indore/rau-restaurants">
+              Rau - 88 places
             </a>
           </button>
           <button className="locality-button">
@@ -289,7 +244,6 @@ const HomePage = () => {
       </div>
 
 
-
       {/* Footer */}
       <footer className="footer">
         <p>© 2008-2024 Zomato™ Ltd. All rights reserved.</p>
@@ -301,4 +255,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePageLayout(HomePage);
+export default (Dashboard);

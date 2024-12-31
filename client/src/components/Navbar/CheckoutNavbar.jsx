@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const CheckoutNavbar = () => {
     const [user] = useState({
-        fullName: "Vishnuraj M",
+        fullName: "Kunal Verma",
     });
 
     const navigate = useNavigate();

@@ -1,6 +1,7 @@
 import React from "react";
 
 // components
+import Navbar from "../Navbar/Navbar"; // Import Navbar
 import NutritionCard from "./NutritionCard";
 import NutritionCarousel from "./NutritionCarousel";
 import NutritionHeroCarousel from "./NutritionHeroCarousel";
@@ -8,7 +9,8 @@ import NutritionHeroCarousel from "./NutritionHeroCarousel";
 const Nutrition = () => {
     return (
         <div>
-            <NutritionHeroCarousel />
+        <Navbar /> {/* Include Navbar */}
+        <NutritionHeroCarousel />
             <div className="my-6">
                 <NutritionCarousel />
             </div>

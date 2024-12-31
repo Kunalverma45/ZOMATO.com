@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 // components
+import Navbar from "../Navbar/Navbar"; // Import Navbar
 import DeliveryCarousel from "./DeliveryCarousel";
 import RestaurantCard from "../RestaurantCard";
 
@@ -53,15 +54,19 @@ const Delivery = () => {
 
     return (
         <>
-            <DeliveryCarousel />
-            <h1 className="text-xl mt-4 mb-2 md:mt-8 md:text-3xl md:font-semibold">
-                Delivery Restaurants in NCR (Delhi)
-            </h1>
-            <div className="grid gap-0 md:gap-2 md:grid-cols-2 grid-cols-1 lg:grid-cols-3">
-                {restaurantList.map((restaurant) => (
-                    <RestaurantCard {...restaurant} key={restaurant._id} />
-                ))}
-            </div>
+        <Navbar /> {/* Include Navbar */}
+        <DeliveryCarousel />
+        <h1 className="text-xl mt-4 mb-2 md:mt-8 md:text-3xl md:font-semibold">Delivery Restaurants in NCR (Delhi)</h1>
+        <div className="grid gap-0 md:gap-2 md:grid-cols-2 grid-cols-1 lg:grid-cols-3">
+            {restaurantList.map((restaurant) => (
+                <RestaurantCard {...restaurant} key={restaurant._id} />
+            ))}
+        </div>
+        <div className="grid gap-0 md:gap-2 md:grid-cols-2 grid-cols-1 lg:grid-cols-3">
+            {restaurantList.map((restaurant) => (
+                <RestaurantCard {...restaurant} key={restaurant._id} />
+            ))}
+        </div>
         </>
     );
 };

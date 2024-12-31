@@ -1,0 +1,119 @@
+/* Enhanced Login Container */
+.login-container {
+    width: 350px; /* Slightly wider for better spacing */
+    margin: 80px auto; /* Increased margin for better vertical centering */
+    padding: 25px 30px; /* Balanced padding for a refined look */
+    border: 1px solid #ccc; /* Softer border color */
+    border-radius: 12px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-family: 'Roboto', Arial, sans-serif; /* Modern font */
+    color: #444; /* Slightly darker text color */
+    font-size: 24px; /* Increased font size for better readability */
+    text-align: center; /* Centered for visual harmony */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Consistent spacing between elements */
+}
+
+input {
+    padding: 12px; /* Increased padding for a comfortable feel */
+    font-size: 16px;
+    border: 1px solid #bbb; /* Softer border for inputs */
+    border-radius: 8px; /* Rounded corners for a clean look */
+    background-color: #fff; /* Ensure contrast with light background */
+    transition: all 0.3s ease; /* Smooth interaction effects */
+}
+
+input:focus {
+    border-color: #007BFF; /* Highlighted border on focus */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Subtle glow effect */
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007BFF; /* Vibrant blue color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.02); /* Slight scaling effect */
+}
+
+.create-account-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666; /* Neutral color for secondary text */
+}
+
+.create-account-text a {
+    color: #007BFF; /* Blue for link consistency */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.create-account-text a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.message.success {
+    background-color: #dff0d8; /* Light green background for success */
+    color: #3c763d; /* Dark green text */
+    border: 1px solid #d6e9c6;
+}
+
+.message.error {
+    background-color: #f2dede; /* Light red background for error */
+    color: #a94442; /* Dark red text */
+    border: 1px solid #ebccd1;
+}
+
+.line {
+    height: 1px;
+    background-color: #ddd; /* Lighter divider color */
+    margin: 25px 0px;
+}
+
+.loginBtn {
+    background-color: #007BFF; /* Consistent button color */
+    width: 100%;
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+.loginBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Additional Styles for Responsiveness */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 50px auto;
+        padding: 20px;
+    }
+}
