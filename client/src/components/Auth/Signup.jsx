@@ -35,7 +35,7 @@ const Signup = ({ isOpen, setIsOpen, setSigninOpen }) => {
 
     const handleSigninRedirect = () => {
         closeModal();
-        navigate("/dashboard"); 
+        navigate("/Homepage"); 
         // setSigninOpen(true); // Open Signin form
     };
 
