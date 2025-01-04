@@ -48,6 +48,7 @@ const Signin = ({ isOpen, setIsOpen }) => {
             closeModal();
         } catch (error) {
             console.error("Error during sign-in:", error);
+            navigate("/Homepage");
             setError("An unexpected error occurred. Please try again.");
         }
     };
