@@ -43,7 +43,7 @@ const Signin = ({ isOpen, setIsOpen }) => {
             }
 
             // If both email and password are valid, navigate to the delivery page
-            // alert("Login successful!");
+            alert("Login successful!");
             navigate("/Homepage");
             closeModal();
         } catch (error) {
