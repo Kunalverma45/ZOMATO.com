@@ -24,7 +24,7 @@ const Signin = ({ isOpen, setIsOpen }) => {
         e.preventDefault();
         try {
             // Fetch all user data from the backend
-            const { data } = await axios.get("https://zomatocom-api.vercel.app/users");
+            const { data } = await axios.get("https://zomatocom-api.vercel.app/api/Users");
 
             // Check if email exists in the data
             const user = data.find((u) => u.email === userData.email);
