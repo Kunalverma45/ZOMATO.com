@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  // origin: ["https://deploy-mern-1whq.vercel.app"],
+  origin: ["https://zomatocom.vercel.app/main-page"]
   // methods: ["POST", "GET"],
   // credentials: true
 }));
