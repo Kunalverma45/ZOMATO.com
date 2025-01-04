@@ -16,11 +16,15 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: ["https://deploy-mern-1whq.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect("mongodb+srv://kv47871:Lte0SNh6S4grItS7@fliprcluster.aeivs.mongodb.net/ZomatoCollections?retryWrites=true&w=majority&appName=FLiPRcluster")
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((error) => {
     console.error("Error connecting to MongoDB Atlas:", error);
