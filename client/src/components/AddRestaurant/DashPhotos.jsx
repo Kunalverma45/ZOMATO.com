@@ -91,38 +91,6 @@ const DashPhotos = ({ email }) => {
 };
 
 
-  // return (
-  //   <section className="photos-section">
-  //     <h3>Restaurant Photos</h3>
-  //     <div className="photo-gallery">
-  //       {menuImage && menuImage.length > 0 ? (
-  //         menuImage.map((image, index) => {
-  //           const imageSrc = image ? `http://localhost:5000/${image.replace(/\\/g, '/')}` : null;
-
-  //           return (
-  //             <div key={index} className="photo-item">
-  //               <img
-  //                 src={imageSrc || 'path/to/placeholder/image.jpg'}  // Use a placeholder image when no valid image
-  //                 alt={`Restaurant ${index}`}
-  //               />
-  //               <button onClick={() => handleDelete(image)}>Delete</button>
-  //             </div>
-  //           );
-  //         })
-  //       ) : (
-  //         <p>No images available</p>
-  //       )}
-  //     </div>
-  
-  //     <input
-  //       type="file"
-  //       accept="image/*"
-  //       onChange={(e) => setSelectedFile(e.target.files[0])}
-  //     />
-  //     <button onClick={handleUpload}>Upload</button>
-  //   </section>
-  // );  
-
   return (
     <section className="photos-section" style={{ fontFamily: 'Arial, sans-serif', margin: '20px' }}>
       <h3 style={{ color: '#ff5a5f', fontSize: '1.8em' }}>Restaurant Photos</h3>
@@ -208,7 +176,7 @@ const DashPhotos = ({ email }) => {
             );
           })
         ) : (
-          <p style={{ color: '#999', fontStyle: 'italic' }}>No photos available. Upload your first photo!</p>
+          <p style={{ color: '#999', fontStyle: 'italic' }}>🔍Fetching Photos..!!</p>
         )}
       </div>
     </section>
