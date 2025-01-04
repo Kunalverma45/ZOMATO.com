@@ -22,7 +22,7 @@ const Signup = ({ isOpen, setIsOpen, setSigninOpen }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("https://zomatocom-api.vercel.app/", userData);
+            const { data } = await axios.post("https://zomatocom-api.vercel.app/users", userData);
             alert(data.message); // Success message
             navigate("/Homepage"); 
             closeModal();
